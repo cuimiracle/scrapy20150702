@@ -1,7 +1,8 @@
 __author__ = 'emilyc'
 
 import scrapy
-class DmozSpider(scrapy. Spider):
+
+class DmozSpider(scrapy.Spider):
     name = "dmoz"
     allowed_domains = ["dmoz.org"]
     start_urls = [
@@ -9,8 +10,7 @@ class DmozSpider(scrapy. Spider):
         "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"
     ]
 
-
     def parse(self, response):
-        filename = response. url. split("/")[ -2] + ' .html'
-        with open(filename, ' wb' ) as f:
-            f. write(response.body)
+        filename = 'a.html'
+        with open(filename, 'a' ) as f:
+            f.write(response.body)
